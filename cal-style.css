@@ -16,7 +16,16 @@ body {
     flex: 0 1 120px;
     border: 2px solid black;
     border-radius: 5px;
+    display: flex;
+    align-items: center;
+    justify-content: right;
 }
+    p {
+        text-align: right;
+        font-size: 65px;
+        margin-top: -10px;
+        margin-bottom: -10px;
+    }
 #num-pad {
     margin-top: 10px;
     display: grid;
@@ -31,6 +40,7 @@ button {
     font-size: 30px;
     border: 1px solid black;
     background-color: #008645;
+    cursor: pointer;
 }
 .num, #dec {background-color: #D0D0D0;}
 #equ {background-color: #D92F60;}
