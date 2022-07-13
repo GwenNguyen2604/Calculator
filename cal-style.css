@@ -1,46 +1,83 @@
+/* ================== Body =================== */
 body {
     display: flex;
     justify-content: center;
 }
+/* ============ Calculator area ============== */
 #calc {
-    width: 400px;
+    width: 350px;
     height: auto;
-    padding: 10px;
+    padding: 15px;
     margin-top: 100px;
+    gap: 10px;
     display: flex;
     flex-direction: column;
     border: 2px solid black;
-    border-radius: 5px;
+    border-radius: 20px;
+    background-color: #B0BCC1;
 }
+/* =============== The screen ================ */
 #screen {
-    flex: 0 1 120px;
+    flex: 0 1 100px;
     border: 2px solid black;
-    border-radius: 5px;
+    border-radius: 10px;
     display: flex;
     align-items: center;
     justify-content: right;
+    background-color: #719676;
 }
+    /* ======== Screen number display ======== */
     p {
         text-align: right;
-        font-size: 65px;
-        margin-top: -10px;
-        margin-bottom: -10px;
+        font-size: 55px;
+        margin: -10px 5px;
+        font-family: 'Share Tech Mono', monospace;
     }
+
+/* =============== The numpad ================ */
 #num-pad {
-    margin-top: 10px;
+    margin-top: 5px;
     display: grid;
     grid-template-columns: repeat(4, 1fr);
     grid-auto-rows: repeat(5, auto);
     gap: 10px;
 }
-
-button {
-    height: 70px;
-    border-radius: 5px;
-    font-size: 30px;
-    border: 1px solid black;
-    background-color: #008645;
-    cursor: pointer;
-}
-.num, #dec {background-color: #D0D0D0;}
-#equ {background-color: #D92F60;}
+    /* ========= Buttons in general ========== */
+    button {
+        height: 70px;
+        border-radius: 30px;
+        font-size: 30px;
+        border: 2px solid #787878;
+        cursor: pointer;
+    }
+    /* Specific buttons */
+    /* ================================== */
+    #equ {
+        background-color: #E9816B;
+    } #equ:active {
+            background-color: #EAADA0;
+        }
+    /* ================================== */
+    .num, #decimal {
+        background-color: #ffffff;
+    } .num:active, #decimal:active {
+            background-color: #BFBFBF;
+        }
+    /* ================================== */
+    #AC {
+        background-color: #D92F60;
+    } #AC:active {
+            background-color: #E67D9C;
+        }
+    /* ================================== */
+    #backSpc, #negSign, #percent {
+        background-color: #308EB2;
+    } #backSpc:active, #negSign:active, #percent:active {
+            background-color: #56B6DB;
+        }
+    /* ================================== */
+    #mult, #divi, #sum, #diff {
+        background-color: #646D71;
+    } #mult:active, #divi:active, #sum:active, #diff:active {
+            background-color: #87959B;
+        }
